@@ -1,0 +1,1 @@
+chicken,steak,ground-beef,pork,roast-beef,salmon,white-fish,tofu

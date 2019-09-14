@@ -3,20 +3,21 @@ import pandas as pd
 from collections import Counter, OrderedDict
 
 # populate dataframe parsing csv; data starts as strings
-with open('~/suggest-din/dummy.csv') as meals:
+with open('/home/esamson/Desktop/projects/suggest-din/dummy.csv') as meals:
     # fullCSV = csv.reader(meals, delimiter=',')
     mealdata = pd.read_csv(meals, delimiter=',', header=0, skiprows=0)
     df = pd.DataFrame(mealdata)
-     
-# from here on code abbreviates protein -> meat, etc.
-# lists of meats, carbs, and veggies 
-meat_list = ['chicken', 'steak','ground-beef', 'pork', 'roast-beef', 'salmon', 'white-fish',
-            'tofu']
-carb_list = ['rice', 'pasta', 'spaghetti', 'macncheese', 'potato', 'risotto', 'lasagna', 'dumplings',
-            'gnocchi', 'legumes', 'cauliflower', 'zucchini', 'parsnip', 'beets', 'squash', 'corn',
-            'eggplant']
-vege_list = ['cabbage', 'brocolli', 'asparagus', 'spinach', 'brussels-sprouts', 'collards', 'celery',
-            'bell-peppers', 'okra']             
+
+# process new text file lists of each food type
+# code abbreviates protein -> meat, etc.
+with open('/home/esamson/Desktop/projects/suggest-din/carb-list.txt','r') as carbs:
+    carb_list = carbs.read().split(',')
+
+with open('/home/esamson/Desktop/projects/suggest-din/meat-list.txt','r') as meats:
+    meat_list = meats.read().split(',')
+
+with open('/home/esamson/Desktop/projects/suggest-din/vege-list.txt','r') as veggies:
+    vege_list = veggies.read().split(',')
 
 # initialize dictionaries for each 
 meat_dict, carb_dict, vege_dict = {},{},{}
