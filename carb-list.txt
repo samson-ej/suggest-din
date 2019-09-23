@@ -1,1 +1,1 @@
-rice,pasta,spaghetti,macncheese,potato,risotto,lasagna,dumplings,gnocchi,legumes,cauliflower,zucchini,parsnip,beets,squash,corn,eggplant
+false,beets,cauliflower,corn,dumplings,eggplant,gnocchi,legumes,parsnip,pasta,pizza,potatoes,red-pasta,rice,risotto,squash,zucchini

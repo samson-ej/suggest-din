@@ -1,1 +1,1 @@
-chicken,steak,ground-beef,pork,roast-beef,salmon,white-fish,tofu
+false,chicken,ground-beef,pork,roast-beef,salmon,steak,tofu,whitefish
